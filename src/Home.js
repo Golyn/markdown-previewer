@@ -38,15 +38,28 @@ const Home = () => {
           <div
             style={{
               backgroundColor: '#6dbfb8',
-              width: '610px',
+              width: '608px',
               margin: '0 auto',
+              border: '1px solid black',
             }}
           >
-            <h2 className="text-start">Editor</h2>
+            <h2
+              className="text-start"
+              style={{
+                boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2)',
+                backgroundColor: '#4aa3a3',
+                padding: '0 8px 0 10px',
+              }}
+            >
+              Editor
+            </h2>
           </div>
           <textarea
             className="mb-4"
-            style={{ boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2)' }}
+            style={{
+              boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2)',
+              backgroundColor: '#c0d8d8',
+            }}
             name=""
             id="editor"
             cols="80"
@@ -55,8 +68,24 @@ const Home = () => {
             onChange={(e) => setState(e.target.value)}
           ></textarea>
         </div>
+        <h2
+          className="text-start"
+          style={{
+            boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2)',
+            backgroundColor: '#4aa3a3',
+            border: '1px solid black',
+            margin: '0 auto',
+            width: '1000px',
+          }}
+        >
+          Previewer
+        </h2>
         <div
           id="preview"
+          style={{
+            boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2)',
+            backgroundColor: '#c0d8d8',
+          }}
           dangerouslySetInnerHTML={{
             __html: marked(state),
           }}
